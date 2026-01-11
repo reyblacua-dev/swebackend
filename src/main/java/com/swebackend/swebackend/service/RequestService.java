@@ -18,6 +18,10 @@ public class RequestService {
 
     public Request create(Request request) { return repository.save(request); }
 
+    public List<Request> getAll() { return repository.findAll(); }
+
+    public Request getOne(Long id) {return repository.findById(id).orElseThrow();}
+
     public Request changeState(Long id, RequestState newState) {
         Request s = repository.findById(id).orElseThrow();
         List<RequestState> pendingPossibleChanges= List.of(RequestState.APROBADA, RequestState.RECHAZADA);
