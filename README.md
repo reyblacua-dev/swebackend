@@ -38,6 +38,7 @@ Se ha optado por implementar la gestión de errores aunque no se requiriera para
 - Implementación de filtrado de préstamos gestionados por este usuario.
 
 **En cuanto a mejoras técnicas y arquitecturales:**
+- Cargar algunos valores por defecto como pueden ser la fecha de creación y el estado del préstamo a PENDIENTE.
 - Eliminar las anotaciones de la definición de los modelos de dto cambiandolos por record simplificando así el código.
 - Añadir una base de datos persistente como PostgresSQL para no perder la información almacenada al acabar con la ejecución del proyecto.
 - Añadir validaciones a los campos del modelo Request: Actualmente los campos pueden venir vacíos o con cantidades negativas o NIF inválidos. Se deberían añadir validaciones para mantener la seguridad y veracidad de los préstamos.
