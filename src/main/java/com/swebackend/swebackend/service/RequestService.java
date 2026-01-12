@@ -36,7 +36,7 @@ public class RequestService {
             throw new IllegalStateException("No puede cambiar el estado de una solicitud que se encuentra APROBADA a otro estado que no sea CANCELADA");
         }
 
-        if(unmatableStates.contains(newState)) {
+        if(unmatableStates.contains(s.getState())) {
             throw new IllegalStateException("No puede cambiar el estado de peticiones que estén RECHAZADA or CANCELADA");
         }
 
